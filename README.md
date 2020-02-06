@@ -49,6 +49,10 @@ _The purpose of this application is to provide a fantasy RPG game with dynamic c
   * Input: Create new item
   * Output: Name: "Daring Killer", Strength: 2, Intelligence: 2, StrengthReq: 1, IntelligenceReq: 1 
 
+* _Spec: The application should be able to change a characters level when the characters current experience is greater than or equal to the levels experience value.
+  * Input: Level 1 character gains 150 experience
+  * Output: Character is now level level 2
+
 ## Setup/Installation Requirements
 _Clone this repository._
 

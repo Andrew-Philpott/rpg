@@ -29,7 +29,14 @@ export class Character {
     this.level = this.level.changeLevel();
     this.increaseAttributes();
   }
+  setStrength(strength) {
+    this.strength = strength;
+  }
 
+  setIntelligence(intelligence) {
+    this.intelligence = intelligence;
+  }
+  
   increaseAttributes() {
     this.vitality += this.type.getVitality();
     this.strength += this.type.getStrength();
@@ -50,9 +57,7 @@ export class Character {
     let requiredStr = weapon.getStrengthRequirement();
     let requiredInt = weapon.getIntelligenceRequirement();
     if((this.strength >= requiredStr) && (this.intelligence >= requiredInt)) {
-
-    } else {
-
+      return true;
     }
   }
 }
