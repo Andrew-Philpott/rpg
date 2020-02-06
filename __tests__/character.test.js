@@ -148,4 +148,22 @@ describe('Character', () => {
     expect(ableToUseWeaponBool).toEqual(false);
   });
 
+  test('The character should be notified that they are unable to use an item if their intelligence is less than the intelligence requirement of the item.', () => {
+    let vitality = 5;
+    let intelligence = 10;
+    let strength = 5;
+    let type = new Type('warrior');
+    let character = new Character(vitality, intelligence, strength, type);
+    let item = new Item(20);
+
+    let randomlyGeneratedItemRequiredIntelligence = item.getIntelligenceRequirement();
+
+    let characterIntelligence = character.getIntelligence();
+
+    let ableToUseWeaponBool = character.ableToUseWeapon(item);
+
+    expect(characterIntelligence <= randomlyGeneratedItemRequiredIntelligence).toEqual(false);
+
+    expect(ableToUseWeaponBool).toEqual(false);
+  });
 });
