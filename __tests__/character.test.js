@@ -119,18 +119,17 @@ describe('Character', () => {
     let item = new Item(20);
 
     let randomlyGeneratedItemRequiredStrength = item.getStrengthRequirement();
-    let randomlyGeneratedItemRequiredIntelligence = item.getIntelligenceRequirement();
-    
+    let randomlyGeneratedItemRequiredIntelligence = item.getIntelligenceRequirement()
     let characterStrength = character.getStrength();
     let characterIntelligence = character.getIntelligence();
-
     let ableToUseWeaponBool = character.ableToUseWeapon(item);
 
     expect(characterStrength <= randomlyGeneratedItemRequiredStrength).toEqual(true);
     expect(characterIntelligence <= randomlyGeneratedItemRequiredIntelligence).toEqual(true);
     expect(ableToUseWeaponBool).toEqual(false);
   });
-  test('The character should be notified that they are unable to use an item if their strength is less than the items strength requirement', () => {
+
+  test('The character should be notified that they are unable to use an item if their strength is less than the strength requirement of the item.', () => {
     let vitality = 5;
     let intelligence = 10;
     let strength = 5;
@@ -139,10 +138,13 @@ describe('Character', () => {
     let item = new Item(20);
 
     let randomlyGeneratedItemRequiredStrength = item.getStrengthRequirement();
+
     let characterStrength = character.getStrength();
+
     let ableToUseWeaponBool = character.ableToUseWeapon(item);
 
     expect(characterStrength <= randomlyGeneratedItemRequiredStrength).toEqual(true);
-    expect(ableToUseWeaponBool).toEqual(false);
+
+    expect(ableToUseWeaponBool).toEqual(true);
   });
 });
