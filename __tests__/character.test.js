@@ -162,7 +162,7 @@ describe('Character', () => {
 
     let ableToUseWeaponBool = character.ableToUseWeapon(item);
 
-    expect(characterIntelligence <= randomlyGeneratedItemRequiredIntelligence).toEqual(false);
+    expect(characterIntelligence <= randomlyGeneratedItemRequiredIntelligence).toEqual(true);
 
     expect(ableToUseWeaponBool).toEqual(false);
   });
