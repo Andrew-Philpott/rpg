@@ -5,7 +5,7 @@ describe('Item', () => {
     test('Should be able to make an item object', () => {
       let playerLevel = 1;
 
-      let item = new Object(playerLevel);
+      let item = new Item(playerLevel);
 
       expect(item instanceof Item).toEqual(true);
     });
