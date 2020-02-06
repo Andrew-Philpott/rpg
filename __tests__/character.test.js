@@ -95,11 +95,9 @@ describe('Character', () => {
     let randomlyGeneratedItemRequiredStrength = item.getStrengthRequirement();
     let randomlyGeneratedItemRequiredIntelligence = item.getIntelligenceRequirement();
     
-    // let characterStrength = character.getStrength();
-    // let characterIntelligence = character.getIntelligence();
-    let characterStrength = 0;
-    let characterIntelligence = 0;
-    
+    let characterStrength = character.getStrength();
+    let characterIntelligence = character.getIntelligence();
+
     let ableToUseWeaponBool = character.ableToUseWeapon(item);
 
     expect(characterStrength >= randomlyGeneratedItemRequiredStrength).toEqual(true);
