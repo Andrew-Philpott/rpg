@@ -60,7 +60,7 @@ describe('Character', () => {
     let type = new Type('warrior');
     let character = new Character(vitality, intelligence, strength, type);
 
-    let newCurrentExperience = 50;
+    let newCurrentExperience = 150;
     character.setCurrentExperience(newCurrentExperience);
     // let characterCurrentExperienceAfterSettingNewValue = character.currentExperience;
     character.checkLevel();
