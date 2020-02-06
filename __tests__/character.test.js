@@ -145,6 +145,7 @@ describe('Character', () => {
 
     expect(characterStrength <= randomlyGeneratedItemRequiredStrength).toEqual(true);
 
-    expect(ableToUseWeaponBool).toEqual(true);
+    expect(ableToUseWeaponBool).toEqual(false);
   });
+
 });
