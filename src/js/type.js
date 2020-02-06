@@ -6,8 +6,8 @@ export class Type {
          this.intelligence;
          this.skills;
         if(this.name === 'warrior') {
-            this.vitality = 10;
-            this.strength = 10;
+            this.vitality = 2;
+            this.strength = 2;
             this.intelligence = 1;
             this.skills = [ (function swingSword() {
                 return 2 * 2;
@@ -17,9 +17,9 @@ export class Type {
             })
         ];
         } else {
-            this.vitality = 5;
-            this.strength = 5;
-            this.intelligence = 10;
+            this.vitality = 1;
+            this.strength = 1;
+            this.intelligence = 2;
             this.skills = [ (function fireball(intelligence) {
                 console.log(intelligence * 3);
             }), (function blizzard(intelligence) {

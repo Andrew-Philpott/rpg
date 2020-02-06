@@ -29,14 +29,19 @@ export class Character {
     this.level = this.level.changeLevel();
     this.increaseAttributes();
   }
+  getStrength() {
+    return this.strength;
+  }
   setStrength(strength) {
     this.strength = strength;
   }
-
+  getIntelligence() {
+    return this.intelligence;
+  }
   setIntelligence(intelligence) {
     this.intelligence = intelligence;
   }
-  
+
   increaseAttributes() {
     this.vitality += this.type.getVitality();
     this.strength += this.type.getStrength();
@@ -53,15 +58,11 @@ export class Character {
     this.item = new Item(0,0);
   }
 
-  ableToUseWeapon(weapon) {
-    let requiredStr = weapon.getStrengthRequirement();
-    let requiredInt = weapon.getIntelligenceRequirement();
+  ableToUseWeapon(item) {
+    let requiredStr = item.getStrengthRequirement();
+    let requiredInt = item.getIntelligenceRequirement();
     if((this.strength >= requiredStr) && (this.intelligence >= requiredInt)) {
       return true;
     }
   }
 }
-
-//Another class that is type. type is going to have different weapons and maybe 
-
-//level up define levels in the level up class with level 1 = 100 exp points, 2 = 300, 3 = 600

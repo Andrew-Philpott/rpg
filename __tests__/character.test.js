@@ -1,5 +1,6 @@
 import { Character } from './../src/js/character.js';
 import { Type } from '../src/js/type.js';
+import { Item } from '../src/js/item.js';
 
 describe('Character', () => {
 
@@ -67,5 +68,43 @@ describe('Character', () => {
     
     //expect(character.currentExperience).toEqual(150);
     expect(character.level.id).toEqual(2);
+  });
+  test('The characters level should change if after checking the current experience, the current experience is more than the level experience value.', () => {
+    let vitality = 5;
+    let intelligence = 10;
+    let strength = 5;
+    let type = new Type('warrior');
+    let character = new Character(vitality, intelligence, strength, type);
+
+    let newCurrentExperience = 150;
+    character.setCurrentExperience(newCurrentExperience);
+    // let characterCurrentExperienceAfterSettingNewValue = character.currentExperience;
+    character.checkLevel();
+    
+    //expect(character.currentExperience).toEqual(150);
+    expect(character.level.id).toEqual(2);
+  });
+  test('The character should be notified that they are able to use a weapon if their strength and intelligence requirements are greater than or equal to the strength and intelligence requirements of the item.', () => {
+    let vitality = 5;
+    let intelligence = 10;
+    let strength = 5;
+    let type = new Type('warrior');
+    let character = new Character(vitality, intelligence, strength, type);
+    let item = new Item(1);
+
+    let randomlyGeneratedItemRequiredStrength = item.getStrengthRequirement();
+    let randomlyGeneratedItemRequiredIntelligence = item.getIntelligenceRequirement();
+    
+    // let characterStrength = character.getStrength();
+    // let characterIntelligence = character.getIntelligence();
+    let characterStrength = 0;
+    let characterIntelligence = 0;
+    
+    let ableToUseWeaponBool = character.ableToUseWeapon(item);
+
+    expect(characterStrength >= randomlyGeneratedItemRequiredStrength).toEqual(true);
+    expect(characterIntelligence >= randomlyGeneratedItemRequiredIntelligence).toEqual(true);
+    expect(ableToUseWeaponBool).toEqual(true);
+
   });
 });
