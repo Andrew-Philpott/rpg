@@ -17,10 +17,10 @@ export class Item {
     getIntelligence() {
       return this.intelligence;
     }
-    getStrengthReq() {
+    getStrengthRequirement() {
       return this.strengthReq;
     }
-    getIntelligenceReq() {
+    getIntelligenceRequirement() {
       return this.intelligenceReq;
     }
     getSellValueInGold() {

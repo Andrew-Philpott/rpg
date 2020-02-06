@@ -1,4 +1,5 @@
 import { Character } from './../src/js/character.js';
+import { Type } from '../src/js/type.js';
 
 describe('Character', () => {
 
@@ -42,8 +43,9 @@ describe('Character', () => {
     let vitality = 5;
     let intelligence = 10;
     let strength = 5;
+    let type = new Type('warrior');
 
-    let character = new Character(vitality, intelligence, strength);
+    let character = new Character(vitality, intelligence, strength, type);
 
     let newCurrentExperience = 200;
     character.setCurrentExperience(newCurrentExperience);

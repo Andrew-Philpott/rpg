@@ -5,7 +5,7 @@ import { Item } from "./item";
 export class Character {
   constructor(vitality, intelligence, strength, typeofChar) {
     this.type = typeofChar;
-    this.skills = typeofChar.skills;
+    //this.skills = this.type.skills;
     this.vitality = vitality;
     this.intelligence = intelligence;
     this.strength = strength;
@@ -47,16 +47,10 @@ export class Character {
   }
 
   ableToUseWeapon(weapon) {
-    let requiredStr = weapon.getStrengthReq();
-    let requiredInt = weapon.getIntelligenceReq();
+    let requiredStr = weapon.getStrengthRequirement();
+    let requiredInt = weapon.getIntelligenceRequirement();
     if((this.strength >= requiredStr) && (this.intelligence >= requiredInt)) {
 
-      //if user input is yes then
-      // if(userWantsToUseWeapon) {
-      //   this.item = weapon;
-      // } else {
-
-      // }
     } else {
 
     }

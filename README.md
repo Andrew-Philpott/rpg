@@ -37,6 +37,9 @@ _The purpose of this application is to provide a fantasy RPG game with dynamic c
   * Input: Level 1 with 100 experience - get experience
   * Output: 100
 
+* _Spec: The application should be 
+* Input: Level 1 with 100 experience - get experience
+  * Output: 100
 
 ## Setup/Installation Requirements
 _Clone this repository._

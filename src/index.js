@@ -17,6 +17,6 @@ $(document).ready(function() {
     }
     console.log(item.getStrength());
     console.log(item.getIntelligence());
-    console.log(item.getStrengthReq() + " strength req");
-    console.log(item.getIntelligenceReq() + " int req");
+    console.log(item.getStrengthRequirement() + " strength req");
+    console.log(item.getIntelligenceRequirement() + " int req");
 });
