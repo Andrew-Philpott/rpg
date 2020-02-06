@@ -37,9 +37,15 @@ _The purpose of this application is to provide a fantasy RPG game with dynamic c
   * Input: Level 1 with 100 experience - get experience
   * Output: 100
 
-* _Spec: The application should be 
-* Input: Level 1 with 100 experience - get experience
-  * Output: 100
+* _Spec: The application should be able to make an item object.
+  * Input: Create new item
+  * Output: return item
+
+* _Spec: The application should be able to make an item object with strength, intelligence, required strength, required intelligence, and name.
+  * Input: Create new item
+  * Output: Name: "Daring Killer", Strength: 2, Intelligence: 2, StrengthReq: 1, IntelligenceReq: 1 
+
+
 
 ## Setup/Installation Requirements
 _Clone this repository._
