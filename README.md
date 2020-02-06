@@ -42,10 +42,12 @@ _The purpose of this application is to provide a fantasy RPG game with dynamic c
   * Output: return item
 
 * _Spec: The application should be able to make an item object with strength, intelligence, required strength, required intelligence, and name.
-  * Input: Create new item
+  * Input: Create new Item(1)
   * Output: Name: "Daring Killer", Strength: 2, Intelligence: 2, StrengthReq: 1, IntelligenceReq: 1 
 
-
+* _Spec: The application should be able to make an item object with the strength required and intelligence required equal to half of the strength and intelligence values respectively. The strength and intellig
+  * Input: Create new item
+  * Output: Name: "Daring Killer", Strength: 2, Intelligence: 2, StrengthReq: 1, IntelligenceReq: 1 
 
 ## Setup/Installation Requirements
 _Clone this repository._

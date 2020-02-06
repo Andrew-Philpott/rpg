@@ -26,4 +26,23 @@ describe('Item', () => {
         expect(randomlyGeneratedItemRequiredStrength).not.toBeFalsy();
         expect(randomlyGeneratedItemRequiredIntelligence).not.toBeFalsy();
       });
+
+      test('Should be able to set the strength required and intelligence required equal to half of the strength and intelligence values respectively.', () => {
+        let playerLevel = 1;
+  
+        let item = new Item(playerLevel);
+
+        // let randomlyGeneratedItemStrength = item.getStrength();
+        // let randomlyGeneratedItemIntelligence = item.getIntelligence();
+        // let randomlyGeneratedItemRequiredStrength = item.getStrengthRequirement();
+        // let randomlyGeneratedItemRequiredIntelligence = item.getIntelligenceRequirement();
+
+        let randomlyGeneratedItemStrength = item.getStrength();
+        let randomlyGeneratedItemIntelligence = item.getIntelligence();
+        let randomlyGeneratedItemRequiredStrength = item.getStrengthRequirement() + 1;
+        let randomlyGeneratedItemRequiredIntelligence = item.getIntelligenceRequirement() + 1;
+
+        expect(randomlyGeneratedItemRequiredStrength).toEqual(randomlyGeneratedItemStrength/2);
+        expect(randomlyGeneratedItemRequiredIntelligence).toEqual(randomlyGeneratedItemIntelligence/2);
+    });
 });
