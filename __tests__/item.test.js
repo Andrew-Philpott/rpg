@@ -32,15 +32,10 @@ describe('Item', () => {
   
         let item = new Item(playerLevel);
 
-        // let randomlyGeneratedItemStrength = item.getStrength();
-        // let randomlyGeneratedItemIntelligence = item.getIntelligence();
-        // let randomlyGeneratedItemRequiredStrength = item.getStrengthRequirement();
-        // let randomlyGeneratedItemRequiredIntelligence = item.getIntelligenceRequirement();
-
         let randomlyGeneratedItemStrength = item.getStrength();
         let randomlyGeneratedItemIntelligence = item.getIntelligence();
-        let randomlyGeneratedItemRequiredStrength = item.getStrengthRequirement() + 1;
-        let randomlyGeneratedItemRequiredIntelligence = item.getIntelligenceRequirement() + 1;
+        let randomlyGeneratedItemRequiredStrength = item.getStrengthRequirement();
+        let randomlyGeneratedItemRequiredIntelligence = item.getIntelligenceRequirement();
 
         expect(randomlyGeneratedItemRequiredStrength).toEqual(randomlyGeneratedItemStrength/2);
         expect(randomlyGeneratedItemRequiredIntelligence).toEqual(randomlyGeneratedItemIntelligence/2);
