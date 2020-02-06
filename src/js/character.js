@@ -64,5 +64,6 @@ export class Character {
     if((this.strength >= requiredStr) && (this.intelligence >= requiredInt)) {
       return true;
     }
+    return false;
   }
 }

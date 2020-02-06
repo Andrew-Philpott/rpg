@@ -53,9 +53,13 @@ _The purpose of this application is to provide a fantasy RPG game with dynamic c
   * Input: Level 1 character gains 150 experience
   * Output: Character is now level level 2
 
-* _Spec: The application should allow a character to use an item if the characters strength and intelligence requirements are greater than or equal to the required strength and intelligence values of the item.
+* _Spec: The application should notify a character that they can use an item if their strength and intelligence requirements are greater than the strength and intelligence requirements of the item.
   * Input: Characters strength 5, intelligence 5. Item requires 5 strength, 5 intelligence
-  * Output: Characters weapon is now that item
+  * Output: Character can use item
+
+* _Spec: The application should not allow a character to use an item if their strength and intelligence requirements are less than the strength and intelligence requirements of the item.
+  * Input: Characters strength 5, intelligence 5. Item requires 20 strength, 20 intelligence
+  * Output: Character cant use item
 
 ## Setup/Installation Requirements
 _Clone this repository._
