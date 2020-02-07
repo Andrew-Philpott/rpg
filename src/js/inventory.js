@@ -1,24 +1,32 @@
 export class Inventory {
-    constructor(inventorySize) {
-        this.maxCapacity = inventorySize;
-        this.InventoryArray = new [];
-        this.InventoryArray
-        this.currentCapacity;
+  constructor(maxCapacity) {
+    this.maxCapacity = maxCapacity;
+    this.inventory = new Array();
+    this.currentCapacity = maxCapacity;
+  }
+
+  addItem(item) {
+    if((item.getSize()) <= this.currentCapacity) {
+      this.inventory.push(item);
+      this.currentCapacity = this.currentCapacity - 1;
+      console.log("Can add item");
+    } else {
+      console.log("Can't add item");
     }
+  }
 
-    addItem(item) {
-        if(item.getSize() > currentCapacity) {
+  selectItem(indexOfItem) {
+    let item = this.inventory[indexOfItem];
+    return item;
+  }
 
-        } else {
+  dropItem(indexOfItem) {
+    this.inventory.splice(indexOfItem,1);
+    this.currentCapacity = this.currentCapacity + 1;
+  }
 
-        }
-    }
-
-    dropItem() {
-
-    }
-
-    sellItem() {
-
-    }
+  sellItem(indexOfItem) {
+    this.inventory.splice(indexOfItem,1);
+    this.currentCapacity = this.currentCapacity + 1;
+  }
 }

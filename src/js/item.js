@@ -7,10 +7,22 @@ export class Item {
       this.listOfUniqueItemModifiers = this.createRandomMultipliers();
       this.strengthReq = (this.strength / 2);
       this.intelligenceReq = (this.intelligence / 2);
+      this.size = 1;
+      this.goldValue;
+      if(this.strength > this.intelligence) {
+        this.goldValue = (this.strength * 2);
+        console.log(`${this.goldValue} in strength`);
+      } else if (this.intelligence > this.strength) {
+        this.goldValue = (this.intelligence * 2);
+        console.log(`${this.goldValue} in intelligence`);
+      } else {
+        this.goldValue = (this.strength + this.intelligence);
+        console.log(`${this.goldValue} in equal`);
+      }
     }
-  getName() {
+    getName() {
       return this.name;
-  }
+    }
     getStrength() {
       return this.strength;
     }
@@ -23,10 +35,12 @@ export class Item {
     getIntelligenceRequirement() {
       return this.intelligenceReq;
     }
-    getSellValueInGold() {
-      //sell value in gold should be dependent on the str and damage
+    getGoldValue() {
+      return this.goldValue;
     }
-
+    getSize() {
+      return this.size;
+    }
     getListOfItemModifiers() {
       return this.listOfUniqueItemModifiers;
     }

@@ -1,6 +1,7 @@
 import { Level } from "./level";
-import { Type } from "./type";
+//import { Type } from "./type";
 import { Item } from "./item";
+import { Inventory } from "./inventory";
 
 export class Character {
   constructor(vitality, intelligence, strength, typeofChar) {
@@ -12,6 +13,46 @@ export class Character {
     this.level = new Level(1, 100);
     this.currentExperience = 0;
     this.item;
+    this.inventory = new Inventory(4);
+    this.gold = 0;
+    this.health = vitality;
+  }
+
+  getCurrentExperience() {
+    return this.currentExperience;
+  }
+  getHealth() {
+    return this.health;
+  }
+
+  setHealth(health) {
+    this.health = health;
+  }
+  getGold() {
+    return this.gold;
+  }
+
+  setGold(goldValue) {
+    this.gold = goldValue;
+  }
+
+  addItemToInventory(item) {
+    this.inventory.addItem(item);
+  }
+
+  dropItemFromInventory(indexOfItem) {
+    this.inventory.dropItem(indexOfItem);
+  }
+
+  sellItemFromInventory(indexOfItem) {
+    let item = this.inventory.selectItem(indexOfItem);
+    this.gold += item.getGoldValue();
+    this.inventory.dropItem(indexOfItem);
+  }
+  
+  selectItemFromInventory(item) {
+    let inventoryItem = this.inventory.selectItem(item);
+    return inventoryItem;
   }
 
   setCurrentExperience(currentExperience) {

@@ -66,8 +66,9 @@ _The purpose of this application is to provide a fantasy RPG game with dynamic c
   * Output: Character cant use item
 
 * _Spec: The application should not allow a character to use an item if their intelligence is less than the intelligence requirement of the item.
-  * Input: Characters intelligence 5, item requires 10 intelligence
+  * Input: Characters intelligence 5, item requires 10 intelligence 
   * Output: Character cant use item
+  
 ## Setup/Installation Requirements
 _Clone this repository._
 
